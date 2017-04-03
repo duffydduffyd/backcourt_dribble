@@ -1,0 +1,15 @@
+# error handling
+<%if @errors%>
+<%@errors.each do |error|%>
+<p><%= error%></p>
+<%end%>
+<%end%>
+
+<form action="/users" method="POST">
+  <input type="text" name="user[user_name]" placeholder="make a username here">
+  <input type="text" name="user[first_name]" placeholder="first name">
+  <input type="text" name="user[last_name]" placeholder="last name">
+  <input type="email" name="user[email]" placeholder="your email address is your login, put it here">
+  <input type="password" name="user[password]" placeholder="make up a password">
+  <input type="submit" value="let's dribble">
+</form>

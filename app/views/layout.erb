@@ -16,9 +16,24 @@
   <script src="/js/application.js"></script>
 
   <title></title>
-</head> # build nav bar here because it will be on every page
+
+</head>
 <body>
- 
+  <nav>
+  <%if session[:id]!=nil%>
+
+  <form action="/sessions" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="sign out here my friend">
+  </form>
+
+  <%else %>
+      <a href="/users/new">register</a>
+      <a href="/sessions/new">login</a>
+  <%end%>
+</nav>
+
+
 
   <%= yield %>
 </body>
