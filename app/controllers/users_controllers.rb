@@ -12,7 +12,8 @@ post '/users' do
     redirect "/users/#{@user.id}" #redirect to personalized page, their show page
   else
     @errors=@user.errors.full_messages #retrieves errors from active record validations
-    erb :"/users/new"
+    #erb :"/users/new"
+    erb :'_errrors'
   end
 end
 
