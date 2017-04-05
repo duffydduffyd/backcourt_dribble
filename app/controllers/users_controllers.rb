@@ -9,7 +9,7 @@ post '/users' do
   # p "*" * 50
   if @user.save #if validations pass
     session[:id]=@user.id #a simple cookie
-    redirect "/users/#{@user.id}" #redirect to personalized page
+    redirect "/users/#{@user.id}" #redirect to personalized page, their show page
   else
     @errors=@user.errors.full_messages #retrieves errors from active record validations
     erb :"/users/new"
@@ -17,7 +17,7 @@ post '/users' do
 end
 
 # make sure at the bottom
-get '/users/:id' do
+get '/users/:id' do #show action
   @user=User.find(params[:id])
   erb :"/users/show" #takes to personalized show page
 end
