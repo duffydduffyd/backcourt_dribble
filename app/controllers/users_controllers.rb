@@ -3,22 +3,21 @@ get '/users/new' do
 end
 
 post '/users' do
-  @user=User.new(params[:user])
+  @user = User.new(params[:user])
   # p "*" * 50
   # p params[:user]
   # p "*" * 50
   if @user.save #if validations pass
-    session[:id]=@user.id #a simple cookie
+    session[:id] = @user.id #a simple cookie
     redirect "/users/#{@user.id}" #redirect to personalized page, their show page
   else
-    @errors=@user.errors.full_messages #retrieves errors from active record validations
-    #erb :"/users/new"
-    erb :'_errrors'
+    @errors = @user.errors.full_messages #retrieves errors from active record validations
+    erb :"/users/new"
   end
 end
 
 # make sure at the bottom
 get '/users/:id' do #show action
-  @user=User.find(params[:id])
+  @user = User.find(params[:id])
   erb :"/users/show" #takes to personalized show page
 end

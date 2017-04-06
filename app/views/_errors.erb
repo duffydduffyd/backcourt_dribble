@@ -1,6 +1,3 @@
-# error handling
-<%if @errors%>
 <%@errors.each do |error|%>
-<p><%= error%></p>
-<%end%>
+  <p class="error"><%=error%></p>
 <%end%>
