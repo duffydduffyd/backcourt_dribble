@@ -3,12 +3,16 @@ get '/users/new' do
 end
 
 post '/users' do
-  @user = User.new(params[:user])
-  # p "*" * 50
+  @user = User.new(params[:user]) # key called user or pass in params directly
+  # p "*" * 50 # p's out {params: {user: user }
   # p params[:user]
   # p "*" * 50
   if @user.save #if validations pass
-    session[:id] = @user.id #a simple cookie
+    p session
+    session[:id] = @user.id #a simple cookie in browser
+    p "💩 " * 30
+    p session
+    p "💩 " * 30
     redirect "/users/#{@user.id}" #redirect to personalized page, their show page
   else
     @errors = @user.errors.full_messages #retrieves errors from active record validations

@@ -1,9 +1,9 @@
+.error {
+  color: red;
+}
+
 body {
   margin: 3%;
   background-color: grey;
   color: white;
-}
-
-.error {
-  color: red;
 }

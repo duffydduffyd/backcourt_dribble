@@ -19,8 +19,8 @@ class User < ActiveRecord::Base
   end
 
   #create authenticate method
-  def authenticate(password)
-    if self.password==password
+  def authenticate(password) # password comes from bcrypt as a parameter
+    if self.password==password #compares
       return self
     else
       return nil
