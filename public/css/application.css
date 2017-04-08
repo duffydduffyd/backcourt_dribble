@@ -1,9 +1,18 @@
-.error {
-  color: red;
-}
+
 
 body {
   margin: 3%;
   background-color: grey;
-  color: white;
+  color: blue;
+}
+
+.nav{
+  position: static;
+  width: 100%;
+  background-color: green;
+  height: 100px;
+}
+
+.error {
+  color: red;
 }

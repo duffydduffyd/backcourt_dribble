@@ -1,2 +1,10 @@
 <%= @user.user_name %>
-<p> hello <%=@user.first_name%></p>
+<p> hello <%=@user.first_name%>! Welcome to Backcourt Dribble. Glad you are here.</p>
+
+<section>
+<p> put partial here to display a single question</p>
+
+<% @questions.each do |question| %>
+<%= erb  :"_questions/display_question", layout: false, ;locals: {question: question} %>
+<% end %>
+</section>

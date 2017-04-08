@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   include BCrypt
 
   # same as null false in migrations
-  validates :email, :password_hash, presence: true
+  validates :email, :password_hash, presence: true # if this isn't true active rocord creates and errors hash
 
   def password
     @password ||= Password.new(password_hash)
@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
 
   #create authenticate method
   def authenticate(password) # password comes from bcrypt as a parameter
-    if self.password==password #compares
+    if self.password == password #compares
       return self
     else
       return nil
