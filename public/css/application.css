@@ -19,7 +19,7 @@
   margin: auto;
   width: 65%;
   /*border: 3px solid green;*/
-  padding: 50px;
+  padding: 70px;
   display: block;
 }
 
@@ -49,4 +49,16 @@ height: 100px;
 .error {
 color: red;
 background-color: yellow;
+}
+
+.greeting {
+  color: #FF5b5c;
+  display: block;
+  text-align: center;
+}
+
+.sport-question {
+  color: #22b3e7;
+  display: block;
+  text-align: center;
 }
