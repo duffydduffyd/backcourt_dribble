@@ -18,21 +18,32 @@
   <title></title>
 
 </head>
+
 <body>
-  <nav>
-  <%if session[:id]!=nil%>
 
-  <form action="/sessions" method="POST">
-    <input type="hidden" name="_method" value="DELETE">
-    <input type="submit" value="sign out here my friend">
-  </form>
+  <header>
+    <nav class="nav-wrapper">
+      <%if session[:id]!=nil%>
 
-  <%else %>
-      <a href="/users/new">register</a>
-      <a href="/sessions/new">login</a>
-  <%end%>
-</nav>
+        <form action="/sessions" method="POST">
+          <input type="hidden" name="_method" value="DELETE">
+          <input type="submit" value="sign out here my friend">
+        </form>
 
+      <%else %>
+        <div id="buttons">
+          <a href="/users/new" class="register">register</a>
+          <a href="/sessions/new">login</a>
+        </div>
+      <%end%>
+    </nav>
+  </header>
+
+
+
+  <% if @errors && @errors.any? %>
+    <%= erb :"_errors" %>
+  <% end %>
 
 
   <%= yield %>
