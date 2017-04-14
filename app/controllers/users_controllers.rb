@@ -17,9 +17,6 @@ post '/users' do
   if @user.save #if model validations pass
     p session
     session[:id] = @user.id #a simple cookie in browser
-    p "💩 " * 30
-    p session
-    p "💩 " * 30
     redirect "/users/#{@user.id}" #redirect to personalized page, their show page
   else
     @errors = @user.errors.full_messages #retrieves errors, an active record method, and full_message, an active record method, from active record validations. Array because it's errors, plural,  an errors hashs.
