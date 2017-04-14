@@ -33,7 +33,7 @@ get '/users/:id' do #show action
   @user = User.find(params[:id])
   # this was for stack overflow
   # @questions = Question.where(user_id: current_user.id)
-  erb :"/users/show" #takes to personalized show page
+  erb :"users/show" #takes to personalized show page
 end
 
 

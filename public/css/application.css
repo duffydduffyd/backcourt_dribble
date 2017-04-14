@@ -1,18 +1,57 @@
-
-
-body {
-  margin: 3%;
-  background-color: grey;
-  color: blue;
+.body {
+  background-color: white;
 }
 
-.nav{
-  position: static;
-  width: 100%;
+.a {
+  color: white;
+}
+
+.nav-wrapper {
   background-color: green;
-  height: 100px;
+
+  padding: 15px;
+}
+
+#buttons {
+  color: white;
+}
+
+#large-logo {
+  margin: auto;
+  width: 65%;
+  /*border: 3px solid green;*/
+  padding: 100px;
+  display: block;
+}
+
+.intro {
+  color: blue;
+  font-size: 1.2em;
+  margin: 2%;
+}
+
+.tag-line {
+  color: green;
+  font-size: 1.2em;
+  margin: 2%;
+}
+
+/*#large-log {
+position: absolute;
+top: 50%;
+left: 50%;
+width: 300px;
+height: 300px;
+}*/
+
+/*.nav{
+position: static;
+width: 100%;
+background-color: green;
+height: 100px;
 }
 
 .error {
-  color: red;
-}
+color: red;
+border-color: yellow;
+}*/

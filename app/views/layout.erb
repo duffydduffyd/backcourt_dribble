@@ -22,7 +22,7 @@
 <body>
 
   <header>
-    <nav>
+    <nav class="nav-wrapper">
       <%if session[:id]!=nil%>
 
         <form action="/sessions" method="POST">
@@ -31,8 +31,10 @@
         </form>
 
       <%else %>
-          <a href="/users/new">register</a>
+        <div id="buttons">
+          <a href="/users/new" class="register">register</a>
           <a href="/sessions/new">login</a>
+        </div>
       <%end%>
     </nav>
   </header>
