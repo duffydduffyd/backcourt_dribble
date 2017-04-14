@@ -39,16 +39,9 @@
   text-align: center;
 }
 
-/*.nav{
-position: static;
-width: 100%;
-background-color: green;
-height: 100px;
-}*/
-
 .error {
-color: red;
-background-color: yellow;
+  color: red;
+  background-color: yellow;
 }
 
 .greeting {
@@ -58,7 +51,19 @@ background-color: yellow;
 }
 
 .sport-question {
-  color: #22b3e7;
+  font-size: 1.5em;
+  color: #ff9037;
   display: block;
   text-align: center;
+}
+
+.content {
+  margin: 0.25em auto;
+  vertical-align: top;
+  /*border: 1px solid green;*/
+  display: inline-block;
+  width: 32%;
+  float: left;
+  text-align: center;
+  font-size: 1.5em;
 }
